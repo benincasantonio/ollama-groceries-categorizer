@@ -6,7 +6,7 @@ from ollama import generate
 input_file = os.path.join('data', 'groceries.txt')
 output_file = os.path.join('data', 'categorized_groceries.txt')
 
-model = 'llama3.2'
+model = 'gemma2:9b'
 
 if not os.path.exists(input_file):
     print(f'File {input_file} not found')
@@ -30,7 +30,7 @@ Instructions:
 5. Concise Output: Format the response to include only the category name followed by the list of items. Do not include additional text, explanations, or metadata in your response.
 """
 
-response = generate(model=model, prompt=prompt, options=dict(temperature=0.4) )
+response = generate(model=model, prompt=prompt, options=dict(temperature=0.4))
 
 categorized_groceries = response.response
 
