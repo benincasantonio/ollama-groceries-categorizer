@@ -17,15 +17,17 @@ with open(input_file, 'r') as f:
 
 
 prompt = f"""
-You are a grocery categorization assistant. Your role is to organize an uncategorized list of groceries into logical and meaningful categories.
-
-Instructions:
-1. Organize the given items into generic categories that make sense like Produce, Dairy, Meat, Frozen, Beverages, Personal Care, Pet Food etc. Make sure to create new categories if needed.
-2. Ensure items appear in only one category.
-3. Ensure that items within each category are alphabetically ordered.
+You are a grocery categorization assistant. Your task is to organize an uncategorized list of grocery items into logical and meaningful categories.
 
 Here is the uncategorized list of groceries:
 {groceries}
+
+Instructions:
+1. Categorize Items Dynamically: Group items into categories that are logical based on the list provided. Use common categories when they apply (e.g., Produce, Dairy, Meat, Personal Care), but feel free to create new, contextually appropriate categories if needed.
+2. Avoid Redundancy: Ensure that each item is assigned to only one category.
+3. Sort Alphabetically: Within each category, list items in alphabetical order.
+4. Exclude Empty Categories: Do not create categories that have no items.
+5. Concise Output: Format the response to include only the category name followed by the list of items. Do not include additional text, explanations, or metadata in your response.
 """
 
 response = generate(model=model, prompt=prompt)
