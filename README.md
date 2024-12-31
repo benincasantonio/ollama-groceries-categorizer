@@ -92,7 +92,7 @@ Bakery:
 
 ## Tech Stack
 - **Python**: Core scripting language.
-- **Ollama**: AI model powering the categorization logic.
+- **Ollama**: AI model powering the categorization logic (used `gemma2:9b` for this project, but you can use any model you prefer; models can be found at [this link](https://ollama.com/search)).
 
 ---
 
