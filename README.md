@@ -68,23 +68,14 @@ Shampoo
 ### Example Output File (`categorized_groceries.txt`)
 ```
 Dairy:
-
     Milk
-
 Meat:
-
     Chicken
-
 Produce:
-
     Apples
-
 Personal Care:
-
     Shampoo
-
 Bakery:
-
     Bread
 ```
 
